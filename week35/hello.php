@@ -10,8 +10,7 @@
 <br> <br>
 <?php
 $name = "Thomas";
-echo "Hello again $name";
-echo "<br>";
+echo "Hello again $name \n newline";
 echo 'The variable is $name';
 echo "<br>";
 //Double quotes reads the variables
@@ -20,6 +19,19 @@ echo "<br>";
 echo <<<TEST
 Hello everyone
 TEST;
+
+$str = "W";
+$str{1} = "I";
+$str{2} = "L";
+//Prints all
+echo $str;
+//Prints I
+echo $str{1};
+echo "<br>";
+// Constants:
+define('NAME', 'Thomas');
+define('GENDER', 'Male');
+echo NAME . " is a " . GENDER;
 ?>
 
 </body>
