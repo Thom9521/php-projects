@@ -10,6 +10,7 @@
 <br> <br>
 <?php
 $name = "Thomas";
+//Newline doesnt work in the browser but in the terminal
 echo "Hello again $name \n newline";
 echo 'The variable is $name';
 echo "<br>";
