@@ -32,7 +32,18 @@ echo "<br>";
 // Constants:
 define('NAME', 'Thomas');
 define('GENDER', 'Male');
-echo NAME . " is a " . GENDER;
+echo NAME . " is a " . GENDER . "<br>";
+
+$fuel = 10;
+while($fuel >= 1){
+    echo "The fuel is at $fuel" . "<br>";
+    --$fuel;
+}
+
+$count = 0;
+while(++$count <= 12){
+    echo "$count times 12 is " . $count * 12 . "<br>";
+}
 ?>
 
 </body>
