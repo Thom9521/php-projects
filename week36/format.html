@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Text formatting</title>
 </head>
 <body>
-$END$
+    <h2>Text formatting</h2>
+    <form action="format.php" method="post">
+        <b>Color:</b>
+        <select name="color">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+        <b>Type face:</b>
+        <p>
+            Italic <input type="radio" name="face" value="i" />
+            Bold <input type="radio" name="face" value="b" />
+            Normal <input type="radio" name="face" value="normal" checked="yes">
+        </p>
+        <p>
+            <textarea name="text" cols="50" rows="4">The text</textarea>
+        </p>
+        <p><input type="submit" value="Format text"></p>
+
+    </form>
 </body>
 </html>
