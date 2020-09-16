@@ -20,37 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1735438-52d2-400d-994b-d84bd3b9ade4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/week37/lab/functions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week37/variables.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week38/lab/q1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week38/lab/q2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week38/lab/q2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week38/lab/q3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week38/lab/q4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week38/regex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week38/todolist/add_task.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/counter.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/counter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/exchange.html" beforeDir="false" afterPath="$PROJECT_DIR$/week36/exchange.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/exchange.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/exchange.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/exchange_quick.html" beforeDir="false" afterPath="$PROJECT_DIR$/week36/exchange_quick.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/exchange_quick.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/exchange_quick.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/for-exercise.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/for-exercise.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/format.html" beforeDir="false" afterPath="$PROJECT_DIR$/week36/format.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/format.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/format.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/lab/date.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/lab/date.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/lab/daysInMonth.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/lab/daysInMonth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/lab/lostMyHomework/dowhile.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/lab/lostMyHomework/dowhile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/lab/lostMyHomework/for.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/lab/lostMyHomework/for.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/lab/lostMyHomework/while.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/lab/lostMyHomework/while.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/lab/treasure-hunters/treasureHunters.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/lab/treasure-hunters/treasureHunters.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/urlencode.html" beforeDir="false" afterPath="$PROJECT_DIR$/week36/urlencode.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/urlencode.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/urlencode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/welcome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week36/while-exercise.php" beforeDir="false" afterPath="$PROJECT_DIR$/week36/while-exercise.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week37/array-functions-explained.php" beforeDir="false" afterPath="$PROJECT_DIR$/week37/array-functions-explained.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week37/array.php" beforeDir="false" afterPath="$PROJECT_DIR$/week37/array.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week37/dice.html" beforeDir="false" afterPath="$PROJECT_DIR$/week37/dice.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week37/dice.php" beforeDir="false" afterPath="$PROJECT_DIR$/week37/dice.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week37/dice2.php" beforeDir="false" afterPath="$PROJECT_DIR$/week37/dice2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week37/lab/chuckdays.php" beforeDir="false" afterPath="$PROJECT_DIR$/week37/lab/chuckdays.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week37/lab/personarray.php" beforeDir="false" afterPath="$PROJECT_DIR$/week37/lab/personarray.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week37/photo.html" beforeDir="false" afterPath="$PROJECT_DIR$/week37/photo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week37/photo.php" beforeDir="false" afterPath="$PROJECT_DIR$/week37/photo.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +76,9 @@
       <updated>1598432649822</updated>
       <workItem from="1598432651182" duration="8320000" />
       <workItem from="1599030324126" duration="14626000" />
-      <workItem from="1599636408335" duration="15820000" />
+      <workItem from="1599636408335" duration="15896000" />
+      <workItem from="1600240007675" duration="10406000" />
+      <workItem from="1600255109199" duration="1230000" />
     </task>
     <servers />
   </component>
@@ -135,10 +114,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598433054320" />
-    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1599651767894">
+    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1600253754749">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1599651767894" />
+    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1600253754749" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1598435282319">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
