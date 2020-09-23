@@ -20,13 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1735438-52d2-400d-994b-d84bd3b9ade4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/week38/lab/q1.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week38/lab/q2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week38/lab/q2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week38/lab/q3.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week38/lab/q4.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week38/regex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week38/todolist/add_task.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week39/cookies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week39/login-form/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week39/login-form/products.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week39/login-form/setupproducts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week39/login-form/setupusers.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week39/login-form/users.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week39/sessions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week39/test-cookie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week39/test-session.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +80,8 @@
       <workItem from="1599030324126" duration="14626000" />
       <workItem from="1599636408335" duration="15896000" />
       <workItem from="1600240007675" duration="10406000" />
-      <workItem from="1600255109199" duration="1230000" />
+      <workItem from="1600255109199" duration="1411000" />
+      <workItem from="1600847297294" duration="13092000" />
     </task>
     <servers />
   </component>
@@ -114,17 +117,17 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598433054320" />
-    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1600253754749">
+    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1600853691004">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1600253754749" />
+    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1600853691004" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1598435282319">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1598435282318" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1599041868659">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600856109557">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1599041868659" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600856109557" />
   </component>
 </project>
