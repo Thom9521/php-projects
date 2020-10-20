@@ -26,7 +26,6 @@
       <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/setupadmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/setupadmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +85,7 @@
       <workItem from="1600255109199" duration="1411000" />
       <workItem from="1600847297294" duration="13540000" />
       <workItem from="1601449763061" duration="12021000" />
-      <workItem from="1603181713393" duration="27085000" />
+      <workItem from="1603181713393" duration="28215000" />
     </task>
     <servers />
   </component>

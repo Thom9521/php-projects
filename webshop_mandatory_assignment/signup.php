@@ -23,6 +23,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="products.php">Products</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="addProducts.php">Manage Products</a>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
                 <?php session_start(); if(!isset($_SESSION['loggedIn']))
                     echo ' <li class="nav-item">
                         <a class="nav-link" href="login.php">Login</a>
@@ -33,13 +40,7 @@
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>'
                 ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="addProducts.php">Manage Products</a>
-                </li>
-
             </ul>
-
-
         </div>
     </nav>
     <?php
@@ -76,9 +77,9 @@
     }
     if(isset($_POST['email'])){
         $email = $_POST['email'];
-        if(!preg_match("/^ [a-z\d._-]+@([a-z\d-]+.)+[a-z]{2,6}$/i", $emailErr)){
+        if(!preg_match("/^[a-zA-Z\d._-]+@([a-zA-Z\d-]+.)+[a-z]{2,6}$/", $email)){
             $regexError=true;
-            $phoneErr= '<div style="color: red">The email must be a common email format</div>';
+            $emailErr= '<div style="color: red">The email must be a common email format</div>';
         }
     }
     if(isset($_POST['password'])){

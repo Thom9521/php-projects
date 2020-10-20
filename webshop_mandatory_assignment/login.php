@@ -24,6 +24,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="products.php">Products</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="addProducts.php">Manage Products</a>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
                 <?php session_start(); if(!isset($_SESSION['loggedIn']))
                     echo ' <li class="nav-item">
                         <a class="nav-link" href="login.php">Login</a>
@@ -34,24 +42,18 @@
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>'
                 ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="addProducts.php">Manage Products</a>
-                </li>
             </ul>
         </div>
-    </nav>
-    <form action="login.php" method="post">
-        <div class="container">
-            <h1 class="display-2 mb-4">Login</h1>
-            <input class="form-control mt-2" placeholder="Email" type="email" name="email" required/>
-            <input class="form-control mt-2" placeholder="Password" type="password" name="password" required/>
-            <input class="btn btn-primary mt-2" type="submit" value="Login">
-        </div>
 
+    </nav>
+
+    <form action="login.php" method="post">
+        <h1 class="display-2 mb-4">Login</h1>
+        <input class="form-control mt-2" placeholder="Email" type="email" name="email" required/>
+        <input class="form-control mt-2" placeholder="Password" type="password" name="password" required/>
+        <input class="btn btn-primary mt-2" type="submit" value="Login">
     </form>
     <p>Need an account? <a href="signup.php">Create one here.</a></p>
-
-
 </div>
 
 </body>
@@ -100,8 +102,8 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
             }
 
 
-        } else die("Invalid credentials");
-    } else die("Invalid credentials");
+        } else die("<div class='container' style='color: red'>Invalid credentials</div>");
+    } else die("<div class='container' style='color: red'>Invalid credentials</div>");
 }
 
 $dbc->close();

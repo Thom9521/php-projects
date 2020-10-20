@@ -23,6 +23,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="products.php">Products</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="addProducts.php">Manage Products</a>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
                 <?php session_start(); if(!isset($_SESSION['loggedIn']))
                     echo ' <li class="nav-item">
                         <a class="nav-link" href="login.php">Login</a>
@@ -33,13 +40,7 @@
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>'
                 ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="addProducts.php">Manage Products</a>
-                </li>
-
             </ul>
-
-
         </div>
     </nav>
         <h2 class="display-2 mb-4">Index</h2>
