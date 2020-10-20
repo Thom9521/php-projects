@@ -20,12 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1735438-52d2-400d-994b-d84bd3b9ade4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/week40/Friend.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week40/Person.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week40/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week40/people.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week40/usingPerson.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/addProducts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/products.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/setUpProductsTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/setupadmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/signup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week39/login-form/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/week39/login-form/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +63,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel-in-class/blog" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
@@ -82,7 +88,8 @@
       <workItem from="1600240007675" duration="10406000" />
       <workItem from="1600255109199" duration="1411000" />
       <workItem from="1600847297294" duration="13540000" />
-      <workItem from="1601449763061" duration="11238000" />
+      <workItem from="1601449763061" duration="12021000" />
+      <workItem from="1603181713393" duration="20574000" />
     </task>
     <servers />
   </component>
@@ -117,25 +124,25 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1598433773069" />
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1598433054320">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1601465045575">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1598433054320" />
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601465045575" />
     <state x="464" y="64" key="NewPhpClassDialog" timestamp="1601457928496">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="464" y="64" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1601457928496" />
-    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1601462178470">
+    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1603194177218">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1601462178470" />
+    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1603194177218" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1598435282319">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1598435282318" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600856109557">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603190431457">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600856109557" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603190431457" />
   </component>
 </project>
