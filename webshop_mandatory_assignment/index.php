@@ -34,7 +34,7 @@
                     </li>'
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="addProducts.php">Add Products</a>
+                    <a class="nav-link" href="addProducts.php">Manage Products</a>
                 </li>
 
             </ul>
@@ -42,7 +42,7 @@
 
         </div>
     </nav>
-        <h2>Index</h2>
+        <h2 class="display-2 mb-4">Index</h2>
         <?php
         if(isset($_SESSION['username']) && !isset($_SESSION['admin'])) echo '<p>Welcome <b>'. $_SESSION['username'] . '</b>';
         if(isset($_SESSION['username']) && isset($_SESSION['admin'])) echo '<p>Welcome your almighty admin <b>'. $_SESSION['username'] .'</b>';

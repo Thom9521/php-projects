@@ -20,17 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1735438-52d2-400d-994b-d84bd3b9ade4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/addProducts.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/products.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/setUpProductsTable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/setupadmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/signup.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week39/login-form/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/week39/login-form/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/addProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/addProducts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/setupadmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/setupadmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +86,7 @@
       <workItem from="1600255109199" duration="1411000" />
       <workItem from="1600847297294" duration="13540000" />
       <workItem from="1601449763061" duration="12021000" />
-      <workItem from="1603181713393" duration="20574000" />
+      <workItem from="1603181713393" duration="27085000" />
     </task>
     <servers />
   </component>

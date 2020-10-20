@@ -34,7 +34,7 @@
                     </li>'
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="addProducts.php">Add Products</a>
+                    <a class="nav-link" href="addProducts.php">Manage Products</a>
                 </li>
 
             </ul>
@@ -42,14 +42,67 @@
 
         </div>
     </nav>
+    <?php
+    $nameErr = "";
+    $phoneErr = "";
+    $addressErr = "";
+    $emailErr = "";
+    $passwordErr = "";
+
+    $salt1 = "qm&h*";
+    $salt2 = "pg!@";
+    $isAdmin = false;
+    $regexError = false;
+    if(isset($_POST['name'])){
+        $name = $_POST['name'];
+        if(!preg_match("/^[a-zA-Z']*$/",$name)){
+            $regexError=true;
+            $nameErr= '<div style="color: red">Name must be alphabetic only</div>';
+        }
+    }
+    if(isset($_POST['phone'])){
+        $phone = $_POST['phone'];
+        if(!preg_match('/^[0-9]{8}$/',$phone)){
+            $regexError=true;
+            $phoneErr= '<div style="color: red">Phonenumber must be exact 8 digits</div>';
+        }
+    }
+    if(isset($_POST['address'])){
+        $address = $_POST['address'];
+        if(!preg_match("/^[a-zA-Z\d, ]*$/",$address)){
+            $regexError=true;
+            $addressErr= '<div style="color: red">Address may only contain alphanumeric, commas, and spaces</div>';
+        }
+    }
+    if(isset($_POST['email'])){
+        $email = $_POST['email'];
+        if(!preg_match("/^ [a-z\d._-]+@([a-z\d-]+.)+[a-z]{2,6}$/i", $emailErr)){
+            $regexError=true;
+            $phoneErr= '<div style="color: red">The email must be a common email format</div>';
+        }
+    }
+    if(isset($_POST['password'])){
+        $password = $_POST['password'];
+    }
+    if(isset($_POST['password'])){
+        $token = hash('ripemd128', "$salt1$password$salt2");
+    }
+
+    ?>
     <form action="signup.php" method="post">
         <div class="container">
             <h1 class="display-2 mb-4">Sign Up</h1>
-            <input class="form-control" placeholder="Name" type="text" name="name" required/>
-            <br/>
-            <input class="form-control" placeholder="Password" type="password" name="password" required/>
-            <br/>
-            <input class="btn btn-primary" type="submit" value="Sign Up">
+            <input class="form-control mt-2" placeholder="Name" type="text" name="name" required/>
+            <?php echo $nameErr?>
+            <input class="form-control mt-2" placeholder="Phone" type="number" name="phone" required/>
+            <?php echo $phoneErr?>
+            <input class="form-control mt-2" placeholder="Address" type="text" name="address" required/>
+            <?php echo $addressErr?>
+            <input class="form-control mt-2" placeholder="Email" type="email" name="email" required/>
+            <?php echo $emailErr?>
+            <input class="form-control mt-2" placeholder="Password" type="password" name="password" required/>
+            <?php echo $passwordErr?>
+            <input class="btn btn-primary mt-2" type="submit" value="Sign Up">
         </div>
 
     </form>
@@ -64,35 +117,18 @@ $connection =
     new mysqli('localhost', 'root', '', 'phpclasses');
 if ($connection->connect_error) die($connection->connect_error);
 
-$salt1 = "qm&h*";
-$salt2 = "pg!@";
-$isAdmin = false;
-if(isset($_POST['name'])){
-    $name = $_POST['name'];
-
-}
-if(isset($_POST['password'])){
-    $password = $_POST['password'];
-
-}
-if(isset($_POST['password'])){
-    $token = hash('ripemd128', "$salt1$password$salt2");
-
+if($regexError ===false && isset($_POST['name']) && isset($_POST['password']) && isset($_POST['address']) && isset($_POST['phone']) && isset($_POST['email'])){
+    add_user($connection, $name, $token, $phone, $address, $email, $isAdmin);
 }
 
-if(isset($_POST['name']) && isset($_POST['password'])){
-    add_user($connection, $name, $token, $isAdmin);
-}
-
-
-function add_user($connection, $na, $pw, $iA)
-{
-    $query = "INSERT INTO users(name, password, isAdmin) VALUES('$na', '$pw', '$iA')";
+function add_user($connection, $na, $pw, $ph, $ad, $em, $iA){
+    $query = "INSERT INTO users(name, phone, address, email, password, isAdmin) VALUES('$na', '$ph', '$ad', '$em', '$pw', '$iA')";
     $result = $connection->query($query);
     if (!$result) die($connection->error);
     if($result){
         echo "<div class='container'>Welcome to the system <b>" .$na . "</b>. You are now able to see all the 
               <a href='products.php'>products</a>.</div>";
+        $_SESSION['username'] = "$na";
 
         $_SESSION['loggedIn'] = true;
 

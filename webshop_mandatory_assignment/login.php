@@ -35,7 +35,7 @@
                     </li>'
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="addProducts.php">Add Products</a>
+                    <a class="nav-link" href="addProducts.php">Manage Products</a>
                 </li>
             </ul>
         </div>
@@ -43,15 +43,13 @@
     <form action="login.php" method="post">
         <div class="container">
             <h1 class="display-2 mb-4">Login</h1>
-            <input class="form-control" placeholder="Name" type="text" name="name" required/>
-            <br/>
-            <input class="form-control" placeholder="Password" type="password" name="password" required/>
-            <br/>
-            <input class="btn btn-primary" type="submit" value="Login">
+            <input class="form-control mt-2" placeholder="Email" type="email" name="email" required/>
+            <input class="form-control mt-2" placeholder="Password" type="password" name="password" required/>
+            <input class="btn btn-primary mt-2" type="submit" value="Login">
         </div>
 
     </form>
-    <a href="signup.php"><button class="btn btn-warning ">Sign Up</button></a>
+    <p>Need an account? <a href="signup.php">Create one here.</a></p>
 
 
 </div>
@@ -67,8 +65,8 @@ if(!$dbc){
     echo"Something went wrong with the connection...";
 }
 
-if(isset($_POST['name'])){
-    $name = $_POST['name'];
+if(isset($_POST['email'])){
+    $email = $_POST['email'];
 
 }
 if(isset($_POST['password'])){
@@ -76,8 +74,8 @@ if(isset($_POST['password'])){
 
 }
 
-if(isset($_POST['name']) && isset($_POST['password'])) {
-    $query = "SELECT * FROM users WHERE name = '$name'";
+if(isset($_POST['email']) && isset($_POST['password'])) {
+    $query = "SELECT * FROM users WHERE email = '$email'";
     $result = $dbc->query($query);
     if (!$result) die($dbc->error);
     if ($result->num_rows) {
@@ -88,15 +86,15 @@ if(isset($_POST['name']) && isset($_POST['password'])) {
         $salt2 = "pg!@";
         $token = hash('ripemd128', "$salt1$password$salt2");
 
-        if ($token == $row[2]) {
+        if ($token == $row[5]) {
             $_SESSION['loggedIn'] = true;
             $_SESSION['username'] = "$row[1]";
             header("LOCATION: index.php");
 
-            if($row[3]=== "0"){
+            if($row[6]=== "0"){
                 echo "Welcome $row[1]. Your ID is $row[0]";
             }
-            if($row[3] === "1"){
+            if($row[6] === "1"){
                 echo "Welcome your almighty admin $row[1].";
                 $_SESSION['admin'] = true;
             }
