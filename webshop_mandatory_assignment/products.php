@@ -77,7 +77,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
                         <h5 class="card-title">'.$productRow["name"].'</h5>
                         <h5 class="card-title text-success">'.$productRow["price"].'$</h5>
                         <p class="card-text">'.$productRow["description"].'</p>
-                        <a href="#" class="btn btn-primary">Add to cart</a>
+                        <a href="products.php?id='.$productRow["ID"].'" class="btn btn-primary">Add to cart</a>
                       </div>
                     </div>
                     </div>';
@@ -89,6 +89,14 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
 
     }else{
         echo "There are no products in the database";
+    }
+
+    if(empty($_SESSION['cart'])){
+        $_SESSION['cart'] = array();
+    }
+    if(isset($_GET['id'])){
+        $productID = $_GET['id'];
+        array_push($_SESSION['cart'],$productID );
     }
 }else{
     echo "<div class='container'><h1  class='display-2 mb-4' >You are not authorized. You need to <a href='login.php'>login</a> to be able to see all products </h1></div>";
