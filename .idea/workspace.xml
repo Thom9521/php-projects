@@ -20,9 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1735438-52d2-400d-994b-d84bd3b9ade4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week43/exception1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week43/exception2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week43/exception3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week43/exception4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week43/mvc/app/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week43/mvc/app/controllers/home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week43/mvc/app/core/App.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week43/mvc/app/core/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week43/mvc/app/init.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week43/mvc/app/models/user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week43/mvc/app/views/home/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week43/mvc/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week43/mvc/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/cart.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +95,8 @@
       <workItem from="1600255109199" duration="1411000" />
       <workItem from="1600847297294" duration="13540000" />
       <workItem from="1601449763061" duration="12021000" />
-      <workItem from="1603181713393" duration="30104000" />
+      <workItem from="1603181713393" duration="33055000" />
+      <workItem from="1603264336617" duration="13447000" />
     </task>
     <servers />
   </component>
@@ -124,10 +139,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="464" y="64" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1601457928496" />
-    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1603213083545">
+    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1603269963160">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1603213083545" />
+    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1603269963160" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1598435282319">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -1,0 +1,4 @@
+.productTitle{
+    display: flex;
+    justify-content: space-between;
+}

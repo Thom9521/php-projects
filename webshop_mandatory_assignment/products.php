@@ -3,6 +3,8 @@
     <title>Products</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3fb1511394.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -65,8 +67,16 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
     if (!$productResult) die($dbc->error);
     elseif ($productResult->num_rows) {
 
-        echo "<div class='container'><h2>Products:</h2></div>";
+        echo "<div class='container'>
+                <div class='productTitle'>
+                    <h2 class='display-2 mb-4'>Products</h2>
+                    <div class='mt-4'><a href='cart.php' style='font-size: 6rem; color: black'><i class='fas fa-shopping-cart'></i></a> 
+                </div>
+                </div>
+
+                </div>";
             echo '<div class="container">
+                  
                     <div class="row">';
         while($productRow = $productResult -> fetch_assoc()){
             echo'
