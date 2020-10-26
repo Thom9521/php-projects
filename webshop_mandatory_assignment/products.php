@@ -60,8 +60,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
     if (!$dbc) {
         echo "Something went wrong with the connection...";
     }
-
-
+//Get all products from database
     $productQuery ="SELECT * FROM products";
     $productResult = $dbc->query($productQuery);
     if (!$productResult) die($dbc->error);

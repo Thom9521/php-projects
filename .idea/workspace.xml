@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1735438-52d2-400d-994b-d84bd3b9ade4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/setUpCategoriesTable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week43/mvc/app/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/week43/mvc/app/init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week43/mvc/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/week43/mvc/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/setupadmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/setUpAdminTable.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +85,8 @@
       <workItem from="1600847297294" duration="13540000" />
       <workItem from="1601449763061" duration="12021000" />
       <workItem from="1603181713393" duration="33055000" />
-      <workItem from="1603264336617" duration="14594000" />
+      <workItem from="1603264336617" duration="14633000" />
+      <workItem from="1603732819921" duration="8160000" />
     </task>
     <servers />
   </component>
@@ -125,10 +129,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="464" y="64" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1601457928496" />
-    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1603269963160">
+    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1603743009755">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1603269963160" />
+    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1603743009755" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1598435282319">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

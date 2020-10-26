@@ -43,15 +43,49 @@
             </ul>
         </div>
     </nav>
-        <h2 class="display-2 mb-4">Index</h2>
+        <h2 class="display-2 mb-3">Index</h2>
         <?php
         if(isset($_SESSION['username']) && !isset($_SESSION['admin'])) echo '<p>Welcome <b>'. $_SESSION['username'] . '</b>';
         if(isset($_SESSION['username']) && isset($_SESSION['admin'])) echo '<p>Welcome your almighty admin <b>'. $_SESSION['username'] .'</b>';
 
         ?>
+        <h2 class="mt-5">Choose a category</h2>
     </div>
-
     </body>
 </html>
 
 <?php
+
+if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
+
+
+// Connect to the database:
+    $dbc = mysqli_connect('localhost', 'root', '', 'phpclasses');
+    if (!$dbc) {
+        echo "Something went wrong with the connection...";
+    }
+// Get products from database
+    $categoryQuery ="SELECT * FROM categories WHERE parent_id = 0";
+    $categoryResult = $dbc->query($categoryQuery);
+    if (!$categoryResult) die($dbc->error);
+    elseif ($categoryResult->num_rows) {
+        echo '<div class="container">
+                    <div class="row">';
+        while($categoryRow = $categoryResult -> fetch_assoc()){
+            echo'<div class="container">
+                    <ul>
+                    <li>'.$categoryRow["name"].'</li>
+                    </ul> 
+                 </div>';
+        }
+        echo'    </div>
+             </div>';
+
+
+    }else{
+        echo "There are no categories in the database";
+    }
+}else{
+echo "";
+}
+

@@ -51,11 +51,110 @@
 
 
 <?php
-print_r($_SESSION['cart']);
+//print_r($_SESSION['cart']);
 
 $whereIn = implode(',', $_SESSION['cart']);
 
-$sql = "SELECT * FROM products WHERE id IN ($whereIn)";
+$totalPrice = 0;
+$numberInTable = 0;
 
-echo $sql;
+// Connect to the database:
+$dbc = mysqli_connect('localhost', 'root', '', 'phpclasses');
+if (!$dbc) {
+    echo "Something went wrong with the connection...";
+}
+
+$productQuery = "SELECT * FROM products WHERE id IN ($whereIn)";
+
+$productResult = $dbc->query($productQuery);
+if (!$productResult) {echo "<div class='container'>No products in the cart.</div>";}
+elseif ($productResult->num_rows) {
+/*
+    echo "<div class='container'>
+            </div>
+                </div>";
+    echo '<div class="container">
+                    <div class="row">';
+    while($productRow = $productResult -> fetch_assoc()){
+
+// counts how many times a specific values appears in the array
+        $arrayCount = array_count_values($_SESSION['cart']);
+        $cnt = $arrayCount[$productRow['ID']];
+
+        $totalPrice += (int)$productRow['price']* $cnt;
+
+        echo'
+                   <div class="col-sm-4">
+                    <div class="card">
+                      <img class="card-img-top" src='.$productRow["imagePath"].' style="max-height: 15rem" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">'.$productRow["name"].'</h5>
+                        <h5 class="card-title text-success">'.$productRow["price"].'$</h5>
+                        <p class="card-text">'.$productRow["description"].'</p>
+                        <p class="card-text">Amount: <b>'.$cnt.'</b></p>
+                      </div>
+                    </div>
+                   </div>
+
+                   ';
+
+    }*/
+
+    echo "<div class='container'>
+            </div>
+                </div>";
+    echo '<div class="container">
+           <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Product</th>
+      <th scope="col">Image</th>
+      <th scope="col">Price</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Price for all</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  
+
+';
+    while($productRow = $productResult -> fetch_assoc()){
+
+// counts how many times a specific values appears in the array
+        $arrayCount = array_count_values($_SESSION['cart']);
+        $cnt = $arrayCount[$productRow['ID']];
+
+        $totalPrice += (int)$productRow['price']* $cnt;
+$numberInTable++;
+
+        echo'
+             <tr>
+      <th scope="row">'.$numberInTable.'</th>
+      <td>'.$productRow["name"].'</td>
+      <td><img src='.$productRow["imagePath"].' style="max-height: 1.7rem" alt="Card image cap"></td>
+      <td>'.$productRow["price"].' $</td>
+      <td>'.$cnt.'</td>
+
+      <td>'.$productRow["price"] * $cnt.' $</td>
+      <td></td>
+    </tr>
+                   
+                   ';
+
+    }
+    echo'            
+  </tbody>
+</table>
+                    <h3 class="mt-5">Total price: '.$totalPrice.' $</h3>
+                    </div>
+                   </div>';
+
+
+}else{
+    echo "There are no products in the database";
+}
+
+
 
