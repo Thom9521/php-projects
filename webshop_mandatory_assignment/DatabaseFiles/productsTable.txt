@@ -42,7 +42,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`ID`, `name`, `price`, `imagePath`, `description`, `category`) VALUES
-(1, 'Chair', 100, 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202040/0278/hanna-chair-c.jpg', 'Chair description', 'Chairs'),
+(1, 'Chair', 100, 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202040/0278/hanna-chair-c.jpg', 'A very pleasant chair', 'Chairs'),
 (2, 'Audi A8', 3000000, 'https://i.ytimg.com/vi/sMzB3gkZILc/maxresdefault.jpg', 'A stunning Audi A8', 'Cars'),
 (3, 'Glasses', 2500, 'https://pngimg.com/uploads/glasses/glasses_PNG54349.png', 'Glasses with a power of -2es description', 'Glasses'),
 (6, 'Beats Headphones', 1999, 'https://specials-images.forbesimg.com/imageserve/5e8ce586748506000636107e/960x0.jpg?fit=scale', 'Very nice headphones', 'Headphones'),

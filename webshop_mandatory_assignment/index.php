@@ -89,7 +89,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
             $childCategoryResult = $dbc->query($childCategoryQuery);
             if($childCategoryResult->num_rows){
                 while($childCategoryRow = $childCategoryResult->fetch_assoc()){
-                    echo '<li class="btn btn-link">
+                    echo '<li>
                             <a href="products.php?category='.$childCategoryRow["name"].'">'.$childCategoryRow["name"].'</a>  
                            </li>';
                 }
