@@ -1,0 +1,79 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Vært: 127.0.0.1
+-- Genereringstid: 27. 10 2020 kl. 13:32:36
+-- Serverversion: 10.4.11-MariaDB
+-- PHP-version: 7.4.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `phpclasses`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktur-dump for tabellen `products`
+--
+
+CREATE TABLE `products` (
+  `ID` int(32) NOT NULL,
+  `name` varchar(32) NOT NULL,
+  `price` int(32) NOT NULL,
+  `imagePath` varchar(256) NOT NULL,
+  `description` varchar(256) NOT NULL,
+  `category` varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Data dump for tabellen `products`
+--
+
+INSERT INTO `products` (`ID`, `name`, `price`, `imagePath`, `description`, `category`) VALUES
+(1, 'Chair', 100, 'https://assets.weimgs.com/weimgs/ab/images/wcm/products/202040/0278/hanna-chair-c.jpg', 'Chair description', 'Chairs'),
+(2, 'Audi A8', 3000000, 'https://i.ytimg.com/vi/sMzB3gkZILc/maxresdefault.jpg', 'A stunning Audi A8', 'Cars'),
+(3, 'Glasses', 2500, 'https://pngimg.com/uploads/glasses/glasses_PNG54349.png', 'Glasses with a power of -2es description', 'Glasses'),
+(6, 'Beats Headphones', 1999, 'https://specials-images.forbesimg.com/imageserve/5e8ce586748506000636107e/960x0.jpg?fit=scale', 'Very nice headphones', 'Headphones'),
+(7, 'Logitech Keyboard', 599, 'https://images-na.ssl-images-amazon.com/images/I/61Uqam09cEL._AC_SY450_.jpg', 'A handy keyboard', 'Keyboards'),
+(9, 'Samsung TV', 2999, 'https://images.samsung.com/is/image/samsung/au-n5300-ua32n5300awxxy-frontblack-173631427?$PD_GALLERY_L_JPG$', 'An unique and huge Samsung TV', 'TV'),
+(10, 'Polly', 5, 'https://assets.partyking.org/img/products/1300/polly-mjolkchoklad-godispase-1.jpg', 'Delicious pollys', 'Candy'),
+(22, 'Wooden Table', 59, 'https://www.boconcept.com/on/demandware.static/-/Sites-master-catalog/default/dw9fc54f37/images/530000/533591.jpg', 'And old wooden table in bad stand', 'Tables'),
+(23, 'Red Apple', 1, 'https://iranfreshfruit.net/wp-content/uploads/2020/01/red-apple-fruit.jpg', 'A healthy red apple', 'Fruit'),
+(24, 'Grey Pants', 19, 'https://cdn.shopify.com/s/files/1/0071/5633/4681/products/Men_Original-Mountain-Pant_Relaxed-Fit_Terra_272_grande.jpg?v=1592842211', 'Grey pants in size 34', 'Cloths');
+
+--
+-- Begrænsninger for dumpede tabeller
+--
+
+--
+-- Indeks for tabel `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Brug ikke AUTO_INCREMENT for slettede tabeller
+--
+
+--
+-- Tilføj AUTO_INCREMENT i tabel `products`
+--
+ALTER TABLE `products`
+  MODIFY `ID` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,0 +1,81 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Vært: 127.0.0.1
+-- Genereringstid: 27. 10 2020 kl. 13:32:40
+-- Serverversion: 10.4.11-MariaDB
+-- PHP-version: 7.4.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `phpclasses`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struktur-dump for tabellen `categories`
+--
+
+CREATE TABLE `categories` (
+  `ID` int(32) NOT NULL,
+  `name` varchar(32) NOT NULL,
+  `parent_id` int(32) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Data dump for tabellen `categories`
+--
+
+INSERT INTO `categories` (`ID`, `name`, `parent_id`) VALUES
+(1, 'Furniture', 0),
+(2, 'Electronics', 0),
+(3, 'Food', 0),
+(4, 'Wearables', 0),
+(5, 'Vehicles', 0),
+(6, 'Chairs', 1),
+(7, 'Tables', 1),
+(8, 'Headphones', 2),
+(9, 'Keyboards', 2),
+(10, 'TV', 2),
+(11, 'Candy', 3),
+(12, 'Fruit', 3),
+(13, 'Cloths', 4),
+(14, 'Glasses', 4),
+(15, 'Cars', 5);
+
+--
+-- Begrænsninger for dumpede tabeller
+--
+
+--
+-- Indeks for tabel `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Brug ikke AUTO_INCREMENT for slettede tabeller
+--
+
+--
+-- Tilføj AUTO_INCREMENT i tabel `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `ID` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
