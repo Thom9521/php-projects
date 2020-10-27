@@ -2,6 +2,8 @@
 
 ### Get started:
 - Clone the project
+- Use an apache server like XAMPP or MAMP
+- Start Apache and MySQL 
 - Set up the database with the table files in /DatabaseFiles
 
 ### Logins:
