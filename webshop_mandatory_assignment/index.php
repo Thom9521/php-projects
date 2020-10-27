@@ -74,10 +74,12 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
                     <div class="row">';
         while($categoryRow = $categoryResult -> fetch_assoc()){
             echo'<div class="container">
+   <hr>
                     <a class="btn btn-link parentOption" data-toggle="collapse" href="#collapseExample'.$categoryRow["ID"].'" 
                     role="button" aria-expanded="false" aria-controls="collapseExample">
                     '.$categoryRow["name"].'
                     </a>
+                 
                   <div class="collapse" id="collapseExample'.$categoryRow["ID"].'">
                   <ul>
                     ';
