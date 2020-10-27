@@ -1,10 +1,10 @@
-#Thomas' Webshop
+# Thomas' Webshop
 
-###Get started:
+### Get started:
 - Clone the project
 - Set up the database with the table files in /DatabaseFiles
 
-###Logins:
+### Logins:
 - Admin:
     - email: admin@admin.dk
     - password: admin123
