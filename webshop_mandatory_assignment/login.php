@@ -86,22 +86,24 @@ if(isset($_POST['email']) && isset($_POST['password'])) {
 
         $salt1 = "qm&h*";
         $salt2 = "pg!@";
+        // hashing the password with the salt into the database
         $token = hash('ripemd128', "$salt1$password$salt2");
 
+        //checking if the token is equal to the password row in the database
         if ($token == $row[5]) {
             $_SESSION['loggedIn'] = true;
             $_SESSION['username'] = "$row[1]";
             header("LOCATION: index.php");
 
+            // if the isAdmin field is false in the database
             if($row[6]=== "0"){
                 echo "Welcome $row[1]. Your ID is $row[0]";
             }
+            // if the isAdmin field is true in the database
             if($row[6] === "1"){
                 echo "Welcome your almighty admin $row[1].";
                 $_SESSION['admin'] = true;
             }
-
-
         } else die("<div class='container' style='color: red'>Invalid credentials</div>");
     } else die("<div class='container' style='color: red'>Invalid credentials</div>");
 }

@@ -54,7 +54,6 @@
 
 if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
 
-
 // Connect to the database:
     $dbc = mysqli_connect('localhost', 'root', '', 'phpclasses');
     if (!$dbc) {
@@ -62,16 +61,19 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
     }
     $productQuery= "";
     $seeAllProducts ="";
+
+    //If the user has chosen a category
     if(isset($_GET['category'])){
         $categoryName = $_GET['category'];
+        //Get products where the category name is equal to the GET value
         $productQuery ="SELECT * FROM products WHERE category = '$categoryName'";
         $seeAllProducts = '<a href="products.php"><button class="btn btn-info mb-3">See all products</button></a>';
     }else{
+        //Get all products from database
         $productQuery ="SELECT * FROM products";
         $seeAllProducts = "";
 
     }
-//Get all products from database
     $productResult = $dbc->query($productQuery);
     if (!$productResult) die($dbc->error);
     elseif ($productResult->num_rows) {
@@ -122,6 +124,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
     if(empty($_SESSION['cart'])){
         $_SESSION['cart'] = array();
     }
+    // adding the id of the chosen product to the cart-array
     if(isset($_GET['id'])){
         $productID = $_GET['id'];
         array_push($_SESSION['cart'],$productID );

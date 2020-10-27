@@ -88,7 +88,6 @@
     if(isset($_POST['password'])){
         $token = hash('ripemd128', "$salt1$password$salt2");
     }
-
     ?>
     <form action="signup.php" method="post">
         <div class="container">
@@ -105,10 +104,8 @@
             <?php echo $passwordErr?>
             <input class="btn btn-primary mt-2" type="submit" value="Sign Up">
         </div>
-
     </form>
 </div>
-
 </body>
 </html>
 
@@ -130,9 +127,7 @@ function add_user($connection, $na, $pw, $ph, $ad, $em, $iA){
         echo "<div class='container'>Welcome to the system <b>" .$na . "</b>. You are now able to see all the 
               <a href='products.php'>products</a>.</div>";
         $_SESSION['username'] = "$na";
-
         $_SESSION['loggedIn'] = true;
-
     }
 }
 

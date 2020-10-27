@@ -2,14 +2,3 @@
     display: flex;
     justify-content: space-between;
 }
-.parentOption{
-  margin-bottom: 2rem !important;
-    background-color: red !important;
-    color: red;
-    font-family: "Baskerville Old Face";
-    font-size: 50rem;
-}
-#test{
-    color: blue;
-    font-size: 10rem;
-}

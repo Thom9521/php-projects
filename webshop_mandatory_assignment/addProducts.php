@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container">
-
+    <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.php">Webshop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,6 +30,7 @@
         </div>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
+                <!--Checks if the user is logged in-->
                 <?php session_start(); if(!isset($_SESSION['loggedIn']))
                     echo ' <li class="nav-item">
                         <a class="nav-link" href="login.php">Login</a>
@@ -43,7 +44,10 @@
             </ul>
         </div>
     </nav>
-    <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
+    <?php
+    // Checks if the user is an admin
+    if(isset($_SESSION['admin']) && $_SESSION['admin'] == true) {
+
         echo '<form action = "addProducts.php" method = "post" >
         <div class="container" >
             <h1 class="display-2 mb-4" > Add Products </h1 >
@@ -57,14 +61,17 @@
             <br />
              <select class="form-control" name = "category" required>
                 <option value="" selected disabled>Category</option>';
-        $connection =
-        new mysqli('localhost', 'root', '', 'phpclasses');
+     //Connection to the database
+    $connection =
+    new mysqli('localhost', 'root', '', 'phpclasses');
     if ($connection->connect_error) die($connection->connect_error);
-             // Get the categories without a parent
+
+    // Get the categories without a parent
     $categoryQuery ="SELECT * FROM categories WHERE parent_id != 0";
     $categoryResult = $connection->query($categoryQuery);
     if (!$categoryResult) die($connection->error);
     elseif ($categoryResult->num_rows) {
+        //Fetching each row with the associated field name
         while($categoryRow = $categoryResult -> fetch_assoc()){
             echo '<option value='.$categoryRow["name"].'>'.$categoryRow["name"].'</option>';
         }
@@ -93,6 +100,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
         new mysqli('localhost', 'root', '', 'phpclasses');
     if ($connection->connect_error) die($connection->connect_error);
 
+    //Checking if the post values are set
     if(isset($_POST['name'])){
         $name = $_POST['name'];
     }
@@ -111,8 +119,6 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
 
     if(isset($_POST['name']) && isset($_POST['price']) && isset($_POST['imagePath']) && isset($_POST['description']) ){
 
-
-
     function addNewProduct($connection, $na, $pr, $im, $de, $ca) {
         $query = "INSERT INTO products(name, price, imagePath, description, category) VALUES('$na', '$pr', '$im', '$de', '$ca')";
         $result = $connection->query($query);
@@ -125,7 +131,6 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
 
         addNewProduct($connection, $name, $price, $imagePath, $description, $category);
 
-
     }
 
 // UPDATING PRODUCT
@@ -133,7 +138,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
         $subject = $_REQUEST['subject'];
     }
     if(isset($subject)) {
-
+        //Using switch to check if the form request is to save or delete a product
         switch ($subject) {
 
             case 'Save':
@@ -159,18 +164,12 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
 
                 if (isset($_POST['newName']) && isset($_POST['newPrice']) && isset($_POST['newImagePath']) && isset($_POST['newDescription'])) {
 
-
                     function editProduct($connection, $na, $pr, $im, $de, $ca, $id)
                     {
                         $query = "UPDATE products SET name='$na', price='$pr', imagePath='$im', description='$de', category='$ca' WHERE ID='$id'";
                         $result = $connection->query($query);
                         if (!$result) die($connection->error);
                         if ($result) {
-                            /* function alert($msg) {
-                                 echo "<script type='text/javascript'>alert('$msg');</script>";
-                                 echo alert("The product has been saved");
-
-                             }*/
                             echo "<div class='container'>The product has been saved.</div>";
                             header("LOCATION: addProducts.php");
 
@@ -178,10 +177,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
                             echo "Something went wrong...";
                         }
                     }
-
                     editProduct($connection, $newName, $newPrice, $newImagePath, $newDescription, $newCategory, $newID);
-
-
                 }
                 break;
 
@@ -197,11 +193,6 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
                     $result = $connection->query($query);
                     if (!$result) die($connection->error);
                     if ($result) {
-                        /* function alert($msg) {
-                             echo "<script type='text/javascript'>alert('$msg');</script>";
-                             echo alert("The product has been saved");
-
-                         }*/
                         echo "<div class='container'>The product has been deleted.</div>";
                         header("LOCATION: addProducts.php");
 
@@ -209,10 +200,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
                         echo "Something went wrong...";
                     }
                 }
-
                 deleteProduct($connection, $newID);
-
-
                 break;
         }
     }
@@ -226,7 +214,6 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
         echo "Something went wrong with the connection...";
     }
 
-
     $productQuery ="SELECT * FROM products";
     $productResult = $dbc->query($productQuery);
     if (!$productResult) die($dbc->error);
@@ -235,6 +222,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
         echo "<div class='container'><h2>Products:</h2></div>";
         echo '<div class="container">
                     <div class="row">';
+        // Adding a card for each product in the database
         while($productRow = $productResult -> fetch_assoc()){
             echo'
                     <div class="col-sm-4">
@@ -306,9 +294,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
     }else{
         echo "There are no products in the database";
     }
-
 }
-
 else{
     echo "<div class='container'><p class='display-2 mb-4'>Restricted Area: requires authentication</p></div>";
 }

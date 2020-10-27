@@ -45,6 +45,7 @@
     </nav>
         <h2 class="display-2 mb-3">Thomas' Webshop</h2>
         <?php
+        // Welcome message depending on the user
         if(isset($_SESSION['username']) && !isset($_SESSION['admin'])) echo '<p>Welcome <b>'. $_SESSION['username'] . '</b>';
         elseif(isset($_SESSION['username']) && isset($_SESSION['admin'])) echo '
             <p>Welcome your almighty admin <b>'. $_SESSION['username'] .'</b>
@@ -75,16 +76,15 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
                     <div class="row">';
         while($categoryRow = $categoryResult -> fetch_assoc()){
             echo'<div class="container">
-   <hr>
+                    <hr>
                     <a class="btn btn-link parentOption" data-toggle="collapse" href="#collapseExample'.$categoryRow["ID"].'" 
                     role="button" aria-expanded="false" aria-controls="collapseExample">
                     '.$categoryRow["name"].'
                     </a>
-                 
                   <div class="collapse" id="collapseExample'.$categoryRow["ID"].'">
                   <ul>
                     ';
-            // Get the associated child categories
+            // Getting the associated child categories
             $childCategoryQuery ="SELECT * FROM categories WHERE parent_id = ".$categoryRow['ID'];
             $childCategoryResult = $dbc->query($childCategoryQuery);
             if($childCategoryResult->num_rows){
