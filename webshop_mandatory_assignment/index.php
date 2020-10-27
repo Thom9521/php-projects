@@ -43,13 +43,14 @@
             </ul>
         </div>
     </nav>
-        <h2 class="display-2 mb-3">Index</h2>
+        <h2 class="display-2 mb-3">Thomas' Webshop</h2>
         <?php
         if(isset($_SESSION['username']) && !isset($_SESSION['admin'])) echo '<p>Welcome <b>'. $_SESSION['username'] . '</b>';
-        if(isset($_SESSION['username']) && isset($_SESSION['admin'])) echo '
+        elseif(isset($_SESSION['username']) && isset($_SESSION['admin'])) echo '
             <p>Welcome your almighty admin <b>'. $_SESSION['username'] .'</b>
                     <h2 class="mt-5">Choose a category</h2>
-';
+';  else{echo 'Hello and welcome. </br>
+               Login <a href="login.php">here</a> to be able to use the site.';}
 
         ?>
     </div>
