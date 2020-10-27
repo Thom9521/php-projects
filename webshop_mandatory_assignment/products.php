@@ -60,8 +60,18 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
     if (!$dbc) {
         echo "Something went wrong with the connection...";
     }
+    $productQuery= "";
+    $seeAllProducts ="";
+    if(isset($_GET['category'])){
+        $categoryName = $_GET['category'];
+        $productQuery ="SELECT * FROM products WHERE category = '$categoryName'";
+        $seeAllProducts = '<a href="products.php"><button class="btn btn-info mb-3">See all products</button></a>';
+    }else{
+        $productQuery ="SELECT * FROM products";
+        $seeAllProducts = "";
+
+    }
 //Get all products from database
-    $productQuery ="SELECT * FROM products";
     $productResult = $dbc->query($productQuery);
     if (!$productResult) die($dbc->error);
     elseif ($productResult->num_rows) {
@@ -72,10 +82,10 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
                     <div class='mt-4'><a href='cart.php' style='font-size: 6rem; color: black'><i class='fas fa-shopping-cart'></i></a> 
                 </div>
                 </div>
-
-                </div>";
-            echo '<div class="container">
-                  
+                ";
+        echo $seeAllProducts;
+        echo "</div>";
+            echo '<div class="container">              
                     <div class="row">';
         while($productRow = $productResult -> fetch_assoc()){
             echo'
@@ -86,7 +96,16 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
                         <h5 class="card-title">'.$productRow["name"].'</h5>
                         <h5 class="card-title text-success">'.$productRow["price"].'$</h5>
                         <p class="card-text">'.$productRow["description"].'</p>
+                        ';
+                    if(isset($_GET['category'])){
+                        echo'
+                        <a href="products.php?category='.$categoryName.'&id='.$productRow["ID"].'" class="btn btn-primary">Add to cart</a>
+                        ';}
+                    else{
+                        echo'
                         <a href="products.php?id='.$productRow["ID"].'" class="btn btn-primary">Add to cart</a>
+                            ';}
+                    echo'
                       </div>
                     </div>
                     </div>';
@@ -97,7 +116,7 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
 
 
     }else{
-        echo "There are no products in the database";
+        echo "<div class='container'>There are no products in the database</div>";
     }
 
     if(empty($_SESSION['cart'])){

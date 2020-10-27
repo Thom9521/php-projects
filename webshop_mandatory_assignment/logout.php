@@ -26,25 +26,17 @@
                         <a class="nav-link" href="products.php">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login.php">Login</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="addProducts.php">Manage Products</a>
                     </li>
                 </ul>
             </div>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <?php session_start(); if(!isset($_SESSION['loggedIn']))
-                        echo ' <li class="nav-item">
+
+                   <li class="nav-item">
                         <a class="nav-link" href="login.php">Login</a>
-                    </li>'
-                    ?>
-                    <?php if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true)
-                        echo ' <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Logout</a>
-                    </li>'
-                    ?>
+                    </li>
+
                 </ul>
             </div>
         </nav>
@@ -52,6 +44,6 @@
     </body>
 </html>
 <?php
-
+session_start();
 session_destroy();
 

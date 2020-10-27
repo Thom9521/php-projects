@@ -55,6 +55,24 @@
             <br />
             <input class="form-control" placeholder = "Description" type = "text" name = "description" required />
             <br />
+             <select class="form-control" name = "category" required>
+                <option value="" selected disabled>Category</option>';
+        $connection =
+        new mysqli('localhost', 'root', '', 'phpclasses');
+    if ($connection->connect_error) die($connection->connect_error);
+             // Get the categories without a parent
+    $categoryQuery ="SELECT * FROM categories WHERE parent_id != 0";
+    $categoryResult = $connection->query($categoryQuery);
+    if (!$categoryResult) die($connection->error);
+    elseif ($categoryResult->num_rows) {
+        while($categoryRow = $categoryResult -> fetch_assoc()){
+            echo '<option value='.$categoryRow["name"].'>'.$categoryRow["name"].'</option>';
+        }
+    }
+
+        echo '            
+             </select>
+            <br />
             <input class="btn btn-primary" type = "submit" value = "Add to database" >
         </div >
 
@@ -87,13 +105,16 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
     if(isset($_POST['description'])){
         $description = $_POST['description'];
     }
+    if(isset($_POST['category'])){
+        $category = $_POST['category'];
+    }
 
     if(isset($_POST['name']) && isset($_POST['price']) && isset($_POST['imagePath']) && isset($_POST['description']) ){
 
 
 
-    function addNewProduct($connection, $na, $pr, $im, $de) {
-        $query = "INSERT INTO products(name, price, imagePath, description) VALUES('$na', '$pr', '$im', '$de')";
+    function addNewProduct($connection, $na, $pr, $im, $de, $ca) {
+        $query = "INSERT INTO products(name, price, imagePath, description, category) VALUES('$na', '$pr', '$im', '$de', '$ca')";
         $result = $connection->query($query);
         if (!$result) die($connection->error);
         if($result){
@@ -102,7 +123,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
         else{echo "Something went wrong...";}
     }
 
-        addNewProduct($connection, $name, $price, $imagePath, $description);
+        addNewProduct($connection, $name, $price, $imagePath, $description, $category);
 
 
     }
@@ -132,13 +153,16 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
                 if (isset($_POST['newDescription'])) {
                     $newDescription = $_POST['newDescription'];
                 }
+                if (isset($_POST['newCategory'])) {
+                    $newCategory = $_POST['newCategory'];
+                }
 
                 if (isset($_POST['newName']) && isset($_POST['newPrice']) && isset($_POST['newImagePath']) && isset($_POST['newDescription'])) {
 
 
-                    function editProduct($connection, $na, $pr, $im, $de, $id)
+                    function editProduct($connection, $na, $pr, $im, $de, $ca, $id)
                     {
-                        $query = "UPDATE products SET name='$na', price='$pr', imagePath='$im', description='$de' WHERE ID='$id'";
+                        $query = "UPDATE products SET name='$na', price='$pr', imagePath='$im', description='$de', category='$ca' WHERE ID='$id'";
                         $result = $connection->query($query);
                         if (!$result) die($connection->error);
                         if ($result) {
@@ -155,7 +179,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
                         }
                     }
 
-                    editProduct($connection, $newName, $newPrice, $newImagePath, $newDescription, $newID);
+                    editProduct($connection, $newName, $newPrice, $newImagePath, $newDescription, $newCategory, $newID);
 
 
                 }
@@ -247,10 +271,26 @@ if(isset($_SESSION['admin']) && $_SESSION['admin'] == true){
                       </div>
                       <input type="text" class="form-control" value="'.$productRow["description"].'" name="newDescription">
                     </div>
-                        
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Category</span>
+                      </div>
+                      <select class="form-control" name = "newCategory" required>
+                        <option value='.$productRow["category"].'>'.$productRow["category"].'</option>';
+
+            // Get the categories without a parent
+            $categoryResult = $connection->query($categoryQuery);
+            if (!$categoryResult) die($connection->error);
+            elseif ($categoryResult->num_rows) {
+                while($categoryRow = $categoryResult -> fetch_assoc()){
+                    echo '<option value='.$categoryRow["name"].'>'.$categoryRow["name"].'</option>';
+                }
+            }
+            echo '            
+                          </select> 
+                       </div>
                         <input class="btn btn-primary" name="subject" type="submit" value="Save"/>
                         <input class="btn btn-danger" name="subject" type="submit" value="Delete"/>
-
                       </div>
                     </div>
                     </form>

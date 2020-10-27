@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1735438-52d2-400d-994b-d84bd3b9ade4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/setUpCategoriesTable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/addProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/addProducts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/logout.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/setupadmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/setUpAdminTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/setUpProductsTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/setUpProductsTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +87,8 @@
       <workItem from="1601449763061" duration="12021000" />
       <workItem from="1603181713393" duration="33055000" />
       <workItem from="1603264336617" duration="14633000" />
-      <workItem from="1603732819921" duration="8160000" />
+      <workItem from="1603732819921" duration="8412000" />
+      <workItem from="1603790810440" duration="9116000" />
     </task>
     <servers />
   </component>
@@ -137,6 +139,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1598435282318" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1603797389270">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1603797389270" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603190431457">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

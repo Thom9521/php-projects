@@ -3,13 +3,13 @@
         <title>Webshop</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </head>
     <body>
     <div class="container">
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.php">Webshop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,10 +46,12 @@
         <h2 class="display-2 mb-3">Index</h2>
         <?php
         if(isset($_SESSION['username']) && !isset($_SESSION['admin'])) echo '<p>Welcome <b>'. $_SESSION['username'] . '</b>';
-        if(isset($_SESSION['username']) && isset($_SESSION['admin'])) echo '<p>Welcome your almighty admin <b>'. $_SESSION['username'] .'</b>';
+        if(isset($_SESSION['username']) && isset($_SESSION['admin'])) echo '
+            <p>Welcome your almighty admin <b>'. $_SESSION['username'] .'</b>
+                    <h2 class="mt-5">Choose a category</h2>
+';
 
         ?>
-        <h2 class="mt-5">Choose a category</h2>
     </div>
     </body>
 </html>
@@ -58,13 +60,12 @@
 
 if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
 
-
-// Connect to the database:
+// Connect to the database
     $dbc = mysqli_connect('localhost', 'root', '', 'phpclasses');
     if (!$dbc) {
         echo "Something went wrong with the connection...";
     }
-// Get products from database
+    // Get the categories without a parent
     $categoryQuery ="SELECT * FROM categories WHERE parent_id = 0";
     $categoryResult = $dbc->query($categoryQuery);
     if (!$categoryResult) die($dbc->error);
@@ -73,19 +74,31 @@ if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true){
                     <div class="row">';
         while($categoryRow = $categoryResult -> fetch_assoc()){
             echo'<div class="container">
-                    <ul>
-                    <li>'.$categoryRow["name"].'</li>
-                    </ul> 
+                    <a class="btn btn-link parentOption" data-toggle="collapse" href="#collapseExample'.$categoryRow["ID"].'" 
+                    role="button" aria-expanded="false" aria-controls="collapseExample">
+                    '.$categoryRow["name"].'
+                    </a>
+                  <div class="collapse" id="collapseExample'.$categoryRow["ID"].'">
+                  <ul>
+                    ';
+            // Get the associated child categories
+            $childCategoryQuery ="SELECT * FROM categories WHERE parent_id = ".$categoryRow['ID'];
+            $childCategoryResult = $dbc->query($childCategoryQuery);
+            if($childCategoryResult->num_rows){
+                while($childCategoryRow = $childCategoryResult->fetch_assoc()){
+                    echo '<li class="btn btn-link">
+                            <a href="products.php?category='.$childCategoryRow["name"].'">'.$childCategoryRow["name"].'</a>  
+                           </li>';
+                }
+            }
+            echo '   </ul>
+                   </div>   
                  </div>';
         }
         echo'    </div>
              </div>';
-
-
     }else{
         echo "There are no categories in the database";
     }
-}else{
-echo "";
 }
 
