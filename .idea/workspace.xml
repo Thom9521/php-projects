@@ -20,9 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1735438-52d2-400d-994b-d84bd3b9ade4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/webshop_mandatory_assignment.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week44/autoload/autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week44/autoload/cat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week44/autoload/cowFolder/cow.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week44/autoload/dog.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week44/autoload/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week44/namespaces/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week44/namespaces/parrot.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week44/namespaces/parrot2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week44/pdo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/DatabaseFiles/productsTable.txt" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/DatabaseFiles/productsTable.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webshop_mandatory_assignment/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/webshop_mandatory_assignment/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,16 +63,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel-in-class/blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel-in-class/tasksapi" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\thoma\code\php\week44\autoload\cowFolder" />
+      <recent name="C:\Users\thoma\code\php\webshop_mandatory_assignment" />
       <recent name="C:\Users\thoma\code\php\webshop_mandatory_assignment\DatabaseFiles" />
       <recent name="C:\Users\thoma\code\php\week40" />
       <recent name="C:\Users\thoma\code\php\week36\lab\treasure-hunters" />
-      <recent name="C:\Users\thoma\code\php\week36\lab" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -85,7 +94,8 @@
       <workItem from="1603181713393" duration="33055000" />
       <workItem from="1603264336617" duration="14633000" />
       <workItem from="1603732819921" duration="8412000" />
-      <workItem from="1603790810440" duration="12198000" />
+      <workItem from="1603790810440" duration="12335000" />
+      <workItem from="1603873048700" duration="10353000" />
     </task>
     <servers />
   </component>
@@ -120,18 +130,18 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1598433773069" />
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1601465045575">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1603884465674">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601465045575" />
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1603884465674" />
     <state x="464" y="64" key="NewPhpClassDialog" timestamp="1601457928496">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="464" y="64" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1601457928496" />
-    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1603743009755">
+    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1603881393118">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1603743009755" />
+    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1603881393118" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1598435282319">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
